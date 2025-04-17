@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/books")
 @RequiredArgsConstructor
@@ -24,5 +26,12 @@ public class BookController {
         return bookService.getById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/list")
+    public ResponseEntity<String> insertBooksList(@RequestBody List<BookDTO> books){
+        bookService.saveBooks(books);
+        return ResponseEntity
+                .ok("Inserted " + books.size() + " books!");
     }
 }
