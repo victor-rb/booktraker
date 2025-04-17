@@ -5,7 +5,6 @@ import com.vctr.booktraker.entity.Book;
 import com.vctr.booktraker.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 import java.util.List;
 import java.util.Optional;
