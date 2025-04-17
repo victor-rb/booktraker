@@ -9,3 +9,7 @@ aws:
 logging:
   level:
     root: INFO
+
+spring:
+  profiles:
+    active: local
