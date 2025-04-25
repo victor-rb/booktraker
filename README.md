@@ -56,6 +56,16 @@ The project has a component to create the tables on local profile on --bootRun
 
 ## Build and Run:
 
+Add this local variable for AWS Authentication on DynamoDB
+
+```
+AWS_ACCESS_KEY_ID=dummy
+AWS_SECRET_ACCESS_KEY=dummy
+AWS_REGION=us-east-1
+```
+
+Run this command to build project on local profile
+
 ```./gradlew bootRun --args='--spring.profiles.active=local'```
 
 ## License
